@@ -1,0 +1,7 @@
+.button {
+  @apply bg-black w-[59px] h-[59px] rounded-r-[18px] flex justify-center items-center;
+
+  &:hover {
+    @apply opacity-80;
+  }
+}
