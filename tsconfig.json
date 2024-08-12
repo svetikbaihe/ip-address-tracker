@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "typeRoots": ["node_modules/@types", "types/"],
+
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["./components"],
+      "@components/*": ["./components/*"],
+
+      "@utils": ["./utils"],
+      "@utils/*": ["./utils/*"],
+
+      "@constants": ["./constants"],
+      "@constants/*": ["./constants/*"],
+
+      "@elements": ["./elements"],
+      "@elements/*": ["./elements/*"],
+
+      "@modules": ["./modules"],
+      "@modules/*": ["./modules/*"],
+
+      "@pages": ["./pages"],
+      "@pages/*": ["./pages/*"],
+
+      "@services": ["./services"],
+      "@services/*": ["./services/*"],
+
+      "@state": ["./state"],
+      "@state/*": ["./state/*"],
+
+      "@customTypes": ["./customTypes"],
+      "@customTypes/*": ["./customTypes/*"],
+
+      "@router": ["src/router"],
+      "@router/*": ["src/router/*"],
+
+      "@assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"]
+    },
+  },
+  
+  "homepage": ".",
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
