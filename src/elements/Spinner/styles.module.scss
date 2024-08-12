@@ -1,0 +1,33 @@
+.spinner {
+  @apply absolute left-[46%] top-[46%] z-[1] rounded-[50%];
+  border: 16px solid hsl(0, 0%, 95%);
+  border-top: 16px solid hsl(0, 0%, 17%);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.small {
+  @apply w-32 h-32;
+}
+
+.medium {
+  @apply w-40 h-40;
+}
+
+.large {
+  @apply w-48 h-48;
+}
+
+.page {
+  @apply w-[13.5rem] h-[13.5rem];
+}
