@@ -1,9 +1,12 @@
 import './style.scss';
 import $app from '@constants/app';
-import Button from '@elements/Button';
+import InputText from '@elements/InputText';
 
-const $button = new Button({});
+const $input = new InputText({
+  name: 'ip-domain',
+  placeholder: 'Search for any IP adress or domain'
+});
 
-if($button.buttonElement) {
-  $app?.appendChild($button.buttonElement);
+if($input.inputTextElement) {
+  $app?.appendChild($input.inputTextElement);
 }
