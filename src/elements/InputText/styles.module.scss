@@ -1,0 +1,7 @@
+.input_text_wrapper{
+  @apply flex;
+}
+
+.input_text{
+  @apply w-[498px] h-[59px] rounded-l-[15px] border border-black border-solid text-[1.8rem] pl-[1.4em] text-dark-gray font-normal;
+}
