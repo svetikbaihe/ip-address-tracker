@@ -1,0 +1,19 @@
+.card {
+  @apply w-[111rem] border-[0.5px] border-black border-solid rounded-[15px] flex;
+}
+
+.data_wrapper {
+  @apply w-[27.8rem] flex flex-col gap-[1.8em] px-[4.4em] py-[3.5em] relative;
+}
+
+.title {
+  @apply text-dark-gray font-medium text-[1.3rem] tracking-[1.2px];
+}
+
+.body {
+  @apply text-very-dark-gray font-medium text-[2.6rem] leading-tight;
+}
+
+.divider {
+  @apply absolute top-[41px] right-[-7px] w-[1px] h-[74px] bg-dark-gray transform translate-x-[-50%]
+}
