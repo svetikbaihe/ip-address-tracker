@@ -1,8 +1,8 @@
-export interface InputTextInterface{
+export interface InputTextInterface {
   inputTextElement: HTMLElement | null
 }
 
-export interface InputTextConstructor{
+export interface InputTextConstructor {
   name: string
   placeholder?: string
 }
