@@ -1,8 +1,8 @@
-export interface SpinnerInterface{
+export interface SpinnerInterface {
   spinnerElement: HTMLElement | null
 }
 
-export interface SpinnerConstructor{
+export interface SpinnerConstructor {
   size: SpinnerSize
 }
 

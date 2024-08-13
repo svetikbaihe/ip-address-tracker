@@ -2,6 +2,6 @@ export interface ButtonInterface {
   buttonElement: HTMLElement | null;
 }
 
-export interface ButtonConstructor{
+export interface ButtonConstructor {
   onClick?: VoidFunction;
 }

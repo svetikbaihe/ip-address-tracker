@@ -1,19 +1,29 @@
 import './style.scss';
 import $app from '@constants/app';
-import InputText from '@elements/InputText';
-import Spinner from '@elements/Spinner';
+import Card, { type CardDataType } from '@components/Card';
 
-const $input = new InputText({
-  name: 'ip-domain',
-  placeholder: 'Search for any IP adress or domain'
-});
+const data: CardDataType[] = [
+  {
+    title: 'IP ADDRESS',
+    body: "192.212.174.101"
+  },
+  {
+    title: 'LOCATION',
+    body: "Brooklyn, NY 10001"
+  },
+  {
+    title: 'TIMEZONE',
+    body: "UTC -05:00"
+  },
+  {
+    title: 'ISP',
+    body: "SpaceX Starlink"
+  }
+]
 
-const $spinner = new Spinner({size: 'medium'});
+const $card = new Card({ cardData: data });
 
-if($input.inputTextElement) {
-  $app?.appendChild($input.inputTextElement);
+if ($card.cardElement) {
+  $app?.appendChild($card.cardElement);
 }
 
-if($spinner.spinnerElement) {
-  $app?.appendChild($spinner.spinnerElement);
-}

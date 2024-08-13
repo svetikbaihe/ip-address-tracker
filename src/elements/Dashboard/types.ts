@@ -1,8 +1,8 @@
-export interface DashboardInterface{
+export interface DashboardInterface {
   dashboardElement: HTMLElement | null
 }
 
-export interface DashboardConstructor{
+export interface DashboardConstructor {
   header: HTMLElement | null
   body: HTMLElement | null
 }
