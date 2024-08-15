@@ -1,6 +1,7 @@
 import './style.scss';
 import $app from '@constants/app';
 import Card, { type CardDataType } from '@components/Card';
+import Map from '@components/Map';
 
 const data: CardDataType[] = [
   {
@@ -23,7 +24,13 @@ const data: CardDataType[] = [
 
 const $card = new Card({ cardData: data });
 
-if ($card.cardElement) {
+const $map = new Map({
+  longtitude: -122.0838,
+  langtitude: 37.3861
+});
+
+if ($card.cardElement && $map.mapElement) {
   $app?.appendChild($card.cardElement);
+  $app?.appendChild($map.mapElement);
 }
 
