@@ -24,14 +24,14 @@ class GeoState extends Observer<GeoStateType> implements GeoStateInterface {
   protected _state: GeoStateType = GeoState.INIT_STATE;
 
   constructor() {
-    super(GeoState.INIT_STATE)
+    super(GeoState.INIT_STATE);
 
     if (GeoState.instance && typeof GeoState.instance === "object") {
-      return GeoState.instance
+      return GeoState.instance;
     }
 
-    GeoState.instance = this
-    return this
+    GeoState.instance = this;
+    return this;
   }
 
   public get state() {
@@ -47,7 +47,7 @@ class GeoState extends Observer<GeoStateType> implements GeoStateInterface {
 
   public updateGeoData = async (data: GeoDataType) => {
     this._state.data = data;
-
+    // console.log(this._state.data);
     this.notificationObservers(GeoState.EVENT_TYPE_UPDATE_GEO_DATA);
     return this;
   }
