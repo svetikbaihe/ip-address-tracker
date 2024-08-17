@@ -2,6 +2,7 @@ import './style.scss';
 import $app from '@constants/app';
 import Card, { type CardDataType } from '@components/Card';
 import Map from '@components/Map';
+import HeaderSearch from '@modules/HeaderSearch';
 
 const data: CardDataType[] = [
   {
@@ -24,12 +25,15 @@ const data: CardDataType[] = [
 
 const $card = new Card({ cardData: data });
 
+const $header = new HeaderSearch();
+
 const $map = new Map({
   longtitude: -122.0838,
   langtitude: 37.3861
 });
 
-if ($card.cardElement && $map.mapElement) {
+if ($card.cardElement && $map.mapElement && $header.headerElement) {
+  $app?.appendChild($header.headerElement);
   $app?.appendChild($card.cardElement);
   $app?.appendChild($map.mapElement);
 }

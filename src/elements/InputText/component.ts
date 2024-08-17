@@ -1,21 +1,25 @@
 import styles from './styles.module.scss';
 import type { InputTextConstructor, InputTextInterface } from './types';
-import Button from '@elements/Button';
 
 class InputText implements InputTextInterface{
   protected name: string = '';
   protected placeholder: string = '';
   protected $inputTextWrapper: HTMLElement | null = null;
+  protected handleChange: (value: string) => void;
 
   constructor({ 
     name, 
-    placeholder }: InputTextConstructor) {
+    placeholder,
+    onChange 
+  }: InputTextConstructor) {
       this.name = name;
       
       if(placeholder) {
         this.placeholder = placeholder;
       }
-
+   
+      this.handleChange = onChange;
+      
       this.buildInputTextWrapper();
   }
 
@@ -33,6 +37,12 @@ class InputText implements InputTextInterface{
     $inputText.setAttribute('id', `id-${this.name}`);
     $inputText.setAttribute('placeholder', this.placeholder);
 
+    $inputText.addEventListener('input', (e: Event) => {
+      const target = e.target as HTMLInputElement;
+
+      this.handleChange(target.value);
+    })
+
     return $inputText;
   }
 
@@ -41,13 +51,7 @@ class InputText implements InputTextInterface{
 
     $inputTextWrapper.className = styles.input_text_wrapper;
 
-    $inputTextWrapper.appendChild(this.buildInputText())
-
-    const $button = new Button({});
-
-    if($button.buttonElement) {
-      $inputTextWrapper?.appendChild($button.buttonElement);
-    }
+    $inputTextWrapper.appendChild(this.buildInputText());
 
     this.$inputTextWrapper = $inputTextWrapper;
   }

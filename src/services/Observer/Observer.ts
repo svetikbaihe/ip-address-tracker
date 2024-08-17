@@ -12,7 +12,7 @@ abstract class Observer<State> implements ObserverInterface<State> {
   protected notificationObservers = (eventType: string) => {
     this.observers.forEach(observer => {
       if (observer.eventTypes.includes(eventType)) {
-        observer.handleEvent(this._state, this._prevState, eventType)
+        observer.handleEvent(this._state, this._prevState, eventType);
       }
     })
 
