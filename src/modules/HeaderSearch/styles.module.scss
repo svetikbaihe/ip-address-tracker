@@ -1,5 +1,5 @@
 .header_search {
-  background: url(pattern-bg-desktop.png) 0 0/ cover no-repeat;
+  background: url('pattern-bg-desktop.png') 0 0/ cover no-repeat;
   @apply h-[28rem] flex items-center flex-col gap-[3em] pt-[3.6em];
 }
 
@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 375px){
   .header_search {
-    @apply flex-col bg-[url(pattern-bg-mobile.png)];
+    @apply flex-col bg-[url('pattern-bg-mobile.png')];
   }
 
   .input_wrapper {
