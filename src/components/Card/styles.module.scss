@@ -1,5 +1,6 @@
 .card {
-  @apply w-[111rem] border-[0.5px] border-black border-solid rounded-[15px] flex;
+  @apply w-9/12 border-[0.5px] border-black border-solid rounded-[15px] flex absolute top-[-16%] left-[50%] z-[500] bg-white max-w-[111rem];
+  transform: translateX(-50%);
 }
 
 .data_wrapper {
@@ -16,4 +17,38 @@
 
 .divider {
   @apply absolute top-[41px] right-[-7px] w-[1px] h-[74px] bg-dark-gray transform translate-x-[-50%]
+}
+
+@media only screen and (max-width: 1200px){
+  .card {
+    @apply flex-wrap top-[-20%] py-[2.6em] items-center text-center gap-[1.3rem] min-w-[32.5rem] max-w-[74.5rem] justify-center;
+  }
+
+  .data_wrapper {
+    @apply py-0 gap-[1rem];
+  }
+
+  .title {
+    @apply text-[1rem];
+  }
+
+  .body {
+    @apply text-[1.8rem];
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 757px){
+  .card {
+    @apply flex-col max-w-[32.6rem];
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .card {
+    @apply max-w-[32.6rem] top-[-20%];
+  }
 }

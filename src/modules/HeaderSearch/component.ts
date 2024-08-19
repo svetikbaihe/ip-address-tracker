@@ -24,6 +24,8 @@ class HeaderSearch implements HeaderSearchInterface {
 
     this.ipGeoApi = new IPGeoAPI();
 
+    this.ipGeoApi.getInitGeoData();
+
     this.buildHeader();
   }
 

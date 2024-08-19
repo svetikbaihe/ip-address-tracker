@@ -1,4 +1,5 @@
 export interface IPGeoAPIInterface {
+  getInitGeoData: () => void
   getGeoData: (ip: string) => void
 }
 

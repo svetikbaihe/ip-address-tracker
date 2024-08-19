@@ -5,8 +5,8 @@ import L from 'leaflet';
 
 class Map implements MapInterface {
   protected $map: HTMLElement | null = null;
-  protected langtitude: number = 37.3861;
-  protected longtitude: number = -122.0838;
+  protected langtitude: number = 0;
+  protected longtitude: number = 0;
 
   constructor({
     langtitude,
@@ -29,7 +29,7 @@ class Map implements MapInterface {
 
     $map.id = styles.map;
 
-    const map = L.map($map).setView([this.langtitude, this.longtitude], 7);
+    const map = L.map($map, {zoomControl: false}).setView([this.langtitude, this.longtitude], 13);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,

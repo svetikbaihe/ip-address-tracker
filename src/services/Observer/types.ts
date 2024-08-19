@@ -5,5 +5,5 @@ export interface ObserverInterface<State> {
 
 export interface ObserverType<State> {
   handleEvent: (newState: State, prevState: State, eventType: string) => void
-  eventTypes: string
+  eventTypes: string[]
 }
