@@ -47,7 +47,7 @@ class GeoState extends Observer<GeoStateType> implements GeoStateInterface {
 
   public updateGeoData = async (data: GeoDataType) => {
     this._state.data = data;
-    // console.log(this._state.data);
+  
     this.notificationObservers(GeoState.EVENT_TYPE_UPDATE_GEO_DATA);
     return this;
   }

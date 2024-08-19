@@ -29,6 +29,8 @@ class ResultDisplay implements ResultDisplayInterface {
     prevState: GeoStateType,
     eventType: string
   ) => {
+    console.log(prevState);
+    
     if (
       eventType === GeoState.EVENT_TYPE_UPDATE_GEO_DATA && 
       newState.isInitData || 
