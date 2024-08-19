@@ -23,15 +23,22 @@ class Dashboard implements DashboardInterface{
   protected buildDashboard = () => {
     const $dashboard = document.createElement('div');
 
+    const $dashboardHeader = document.createElement('div');
+
+    const $dashboardBody = document.createElement('div');
+
     $dashboard.className = styles.dashboard;
 
     if(this.header) {
-      $dashboard?.appendChild(this.header);
+      $dashboardHeader?.appendChild(this.header);
     }
 
     if(this.body) {
-      $dashboard?.appendChild(this.body);
+      $dashboardBody?.appendChild(this.body);
     }
+
+    $dashboard.appendChild($dashboardHeader);
+    $dashboard.appendChild($dashboardBody);
 
     this.$dashboard = $dashboard;
   }
