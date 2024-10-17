@@ -1,6 +1,3 @@
-export { default } from './component';
+export { default } from "./component"
 
-export {
-  type InputTextConstructor,
-  type InputTextInterface
-} from './types';
+export { type InputTextConstructor, type InputTextInterface } from "./types"

@@ -1,37 +1,37 @@
-import styles from './styles.module.scss';
-import type { ButtonConstructor, ButtonInterface } from "./types";
+import type { ButtonConstructor, ButtonInterface } from "./types"
+import styles from "./styles.module.scss"
 
 class Button implements ButtonInterface {
-  protected handleClick: VoidFunction = () => {};
-  protected $button: HTMLElement | null = null;
+  protected handleClick: VoidFunction = () => {}
+  protected $button: HTMLElement | null = null
 
-  constructor ({ onClick }: ButtonConstructor) {
+  constructor({ onClick }: ButtonConstructor) {
     if (onClick) {
       this.handleClick = onClick
     }
 
-    this.buildButton();
+    this.buildButton()
   }
 
   public get buttonElement() {
-    return this.$button;
+    return this.$button
   }
 
   protected buildButton = () => {
-    const $button = document.createElement('button');
+    const $button = document.createElement("button")
 
-    $button.className = styles.button;
+    $button.className = styles.button
 
-    $button.addEventListener('click', () => this.handleClick());
+    $button.addEventListener("click", () => this.handleClick())
 
-    const $buttonIcon = document.createElement('img');
+    const $buttonIcon = document.createElement("img")
 
-    $buttonIcon.setAttribute('src', '/icons/icon-arrow.svg');
+    $buttonIcon.setAttribute("src", "/icons/icon-arrow.svg")
 
-    $button.appendChild($buttonIcon);
+    $button.appendChild($buttonIcon)
 
-    this.$button = $button;
+    this.$button = $button
   }
 }
 
-export default Button;
+export default Button

@@ -1,6 +1,3 @@
-export { default } from './component';
+export { default } from "./component"
 
-export {
-  type DashboardConstructor,
-  type DashboardInterface
-} from './types';
+export { type DashboardConstructor, type DashboardInterface } from "./types"

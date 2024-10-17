@@ -1,33 +1,27 @@
-import styles from './styles.module.scss';
-import type { 
-  SpinnerConstructor, 
-  SpinnerInterface, 
-  SpinnerSize } from './types';
+import type { SpinnerConstructor, SpinnerInterface, SpinnerSize } from "./types"
+import styles from "./styles.module.scss"
 
-class Spinner implements SpinnerInterface{
-  protected size: SpinnerSize = 'medium';
-  protected $spinner: HTMLElement | null = null;
+class Spinner implements SpinnerInterface {
+  protected size: SpinnerSize = "medium"
+  protected $spinner: HTMLElement | null = null
 
   constructor({ size }: SpinnerConstructor) {
-    this.size = size;
+    this.size = size
 
-    this.buildSpinner();
+    this.buildSpinner()
   }
 
   get spinnerElement() {
-    return this.$spinner;
+    return this.$spinner
   }
 
   protected buildSpinner = () => {
-    const $spinner = document.createElement('div');
+    const $spinner = document.createElement("div")
 
-    $spinner.className = [
-      styles.spinner,
-      styles[`${this.size}`]
-    ].join(' ');
+    $spinner.className = [styles.spinner, styles[`${this.size}`]].join(" ")
 
-    this.$spinner = $spinner;
+    this.$spinner = $spinner
   }
 }
 
-export default Spinner;
+export default Spinner

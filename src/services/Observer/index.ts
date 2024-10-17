@@ -1,6 +1,3 @@
-export { default } from './Observer';
+export { default } from "./Observer"
 
-export {
-  type ObserverInterface,
-  type ObserverType
-} from './types';
+export { type ObserverInterface, type ObserverType } from "./types"

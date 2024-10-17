@@ -6,8 +6,4 @@ export interface SpinnerConstructor {
   size: SpinnerSize
 }
 
-export type SpinnerSize = 
-'small' |
-'medium' |
-'large' |
-'page'
+export type SpinnerSize = "small" | "medium" | "large" | "page"

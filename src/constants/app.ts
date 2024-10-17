@@ -1,3 +1,3 @@
-const $app = document.getElementById('app');
+const $app = document.getElementById("app")
 
-export default $app;
+export default $app

@@ -1,6 +1,3 @@
-export { default } from './GeoState';
+export { default } from "./GeoState"
 
-export {
-  type GeoStateInterface,
-  type GeoStateType
-} from './types'
+export { type GeoStateInterface, type GeoStateType } from "./types"

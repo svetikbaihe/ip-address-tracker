@@ -1,7 +1,7 @@
-export { default } from './component';
+export { default } from "./component"
 
 export {
   type SpinnerInterface,
   type SpinnerConstructor,
-  type SpinnerSize
-} from './types';
+  type SpinnerSize,
+} from "./types"

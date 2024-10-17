@@ -1,76 +1,79 @@
-import styles from './styles.module.scss';
-import { type HeaderSearchInterface } from './types';
-import InputText, { type InputTextInterface } from '@elements/InputText';
-import Button, { type ButtonInterface } from '@elements/Button';
-import IPGeoAPI, { type IPGeoAPIInterface } from '@services/IPGeoAPI';
+import { type HeaderSearchInterface } from "./types"
+import InputText, { type InputTextInterface } from "@elements/InputText"
+import Button, { type ButtonInterface } from "@elements/Button"
+import IPGeoAPI, { type IPGeoAPIInterface } from "@services/IPGeoAPI"
+import styles from "./styles.module.scss"
 
 class HeaderSearch implements HeaderSearchInterface {
-  protected $headerSearch: HTMLElement | null = null;
-  protected $inputSearch: InputTextInterface | null = null;
-  protected $submitButton: ButtonInterface | null = null;
-  protected ipGeoApi: IPGeoAPIInterface;
-  protected ip: string = '';
+  protected $headerSearch: HTMLElement | null = null
+  protected $inputSearch: InputTextInterface | null = null
+  protected $submitButton: ButtonInterface | null = null
+  protected ipGeoApi: IPGeoAPIInterface
+  protected ip: string = ""
 
   constructor() {
     this.$inputSearch = new InputText({
-      name: 'ip-search',
-      placeholder: 'Search for any IP address or domain',
-      onChange: this.handleSearchChange
-    });
-
-    this.$submitButton = new Button({
-      onClick: this.handleFetchData
+      name: "ip-search",
+      placeholder: "Search for any IP address or domain",
+      onChange: this.handleSearchChange,
     })
 
-    this.ipGeoApi = new IPGeoAPI();
+    this.$submitButton = new Button({
+      onClick: this.handleFetchData,
+    })
 
-    this.ipGeoApi.getInitGeoData();
+    this.ipGeoApi = new IPGeoAPI()
 
-    this.buildHeader();
+    this.ipGeoApi.getInitGeoData()
+
+    this.buildHeader()
   }
 
   public get headerElement() {
-    return this.$headerSearch;
+    return this.$headerSearch
   }
 
   protected buildHeader = () => {
-    const $headerSearch = document.createElement('div');
+    const $headerSearch = document.createElement("div")
 
-    $headerSearch.className = styles.header_search;
+    $headerSearch.className = styles.headerSearch
 
-    const $title = document.createElement('h1');
+    const $title = document.createElement("h1")
 
-    $title.className = styles.title;
+    $title.className = styles.title
 
-    $title.innerText = 'IP Address Tracker';
+    $title.innerText = "IP Address Tracker"
 
-    $headerSearch.appendChild($title);
+    $headerSearch.appendChild($title)
 
-    $headerSearch.appendChild(this.buildInputWrapper());
+    $headerSearch.appendChild(this.buildInputWrapper())
 
-    this.$headerSearch = $headerSearch;
+    this.$headerSearch = $headerSearch
   }
 
   protected buildInputWrapper = () => {
-    const $inputWrapper = document.createElement('div');
+    const $inputWrapper = document.createElement("div")
 
-    $inputWrapper.className = styles.input_wrapper;
+    $inputWrapper.className = styles.inputWrapper
 
-    if (this.$inputSearch?.inputTextElement && this.$submitButton?.buttonElement) {
-      $inputWrapper.appendChild(this.$inputSearch.inputTextElement);
-      $inputWrapper.appendChild(this.$submitButton.buttonElement);
+    if (
+      this.$inputSearch?.inputTextElement &&
+      this.$submitButton?.buttonElement
+    ) {
+      $inputWrapper.appendChild(this.$inputSearch.inputTextElement)
+      $inputWrapper.appendChild(this.$submitButton.buttonElement)
     }
 
-    return $inputWrapper;
+    return $inputWrapper
   }
 
   protected handleSearchChange = (value: string) => {
-    this.ip = value;
+    this.ip = value
   }
 
   protected handleFetchData = () => {
-    this.ipGeoApi.getGeoData(this.ip);
+    this.ipGeoApi.getGeoData(this.ip)
   }
 }
 
-export default HeaderSearch;
+export default HeaderSearch

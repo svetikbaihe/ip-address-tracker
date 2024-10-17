@@ -3,8 +3,7 @@ import { type GeoStateType } from "@state/GeoState"
 export interface ResultDisplayInterface {
   resultDisplayElement: HTMLElement | null
   eventTypes: string[]
-  handleEvent: 
-  ( 
+  handleEvent: (
     newState: GeoStateType,
     prevState: GeoStateType,
     eventType: string

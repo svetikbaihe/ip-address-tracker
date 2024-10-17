@@ -3,6 +3,6 @@ export interface MapInterface {
 }
 
 export interface MapConstructor {
-  langtitude: number
+  latitude: number
   longtitude: number
 }

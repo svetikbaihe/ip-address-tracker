@@ -1,5 +1,3 @@
-export { default } from './component';
+export { default } from "./component"
 
-export {
-  type HeaderSearchInterface
-} from './types'
+export { type HeaderSearchInterface } from "./types"

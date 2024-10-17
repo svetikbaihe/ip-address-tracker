@@ -1,54 +1,24 @@
 .card {
-  @apply w-9/12 border-[0.5px] border-black border-solid rounded-[15px] flex absolute top-[-16%] left-[50%] z-[500] bg-white max-w-[111rem];
-  transform: translateX(-50%);
+  @apply absolute left-1/2 top-[-4.6rem] flex translate-x-[-50%] flex-col border-[0.5px] border-solid;
+  @apply z-[500] min-w-[85%] max-w-[69.3rem] rounded-xl border-none border-black bg-white py-[1.625rem];
+  @apply 1348:pt-0 1350:justify-stretch 1450:justify-evenly justify-center gap-[0.8rem] sm:flex-wrap;
+  @apply sm:flex-row;
 }
 
 .data_wrapper {
-  @apply w-[27.8rem] flex flex-col gap-[1.8em] px-[4.4em] py-[3.5em] relative;
+  @apply relative flex flex-col items-center gap-[0.4rem] sm:w-[17.3rem] xl:px-[2.75rem] xl:py-[2.18rem];
+  @apply 1348:items-stretch;
 }
 
 .title {
-  @apply text-dark-gray font-medium text-[1.3rem] tracking-[1.2px];
+  @apply text-[0.625rem] font-bold tracking-[1.2px] text-dark-gray lg:text-[0.8rem];
 }
 
 .body {
-  @apply text-very-dark-gray font-medium text-[2.6rem] leading-tight;
+  @apply text-[1.1rem] font-medium leading-tight text-very-dark-gray sm:text-[1.3rem];
 }
 
 .divider {
-  @apply absolute top-[41px] right-[-7px] w-[1px] h-[74px] bg-dark-gray transform translate-x-[-50%]
-}
-
-@media only screen and (max-width: 1200px){
-  .card {
-    @apply flex-wrap top-[-20%] py-[2.6em] items-center text-center gap-[1.3rem] min-w-[32.5rem] max-w-[74.5rem] justify-center;
-  }
-
-  .data_wrapper {
-    @apply py-0 gap-[1rem];
-  }
-
-  .title {
-    @apply text-[1rem];
-  }
-
-  .body {
-    @apply text-[1.8rem];
-  }
-
-  .divider {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 757px){
-  .card {
-    @apply flex-col max-w-[32.6rem];
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .card {
-    @apply max-w-[32.6rem] top-[-20%];
-  }
+  @apply laptop-l:absolute laptop-l:right-[-7px] laptop-l:top-[41px] laptop-l:h-[74px] laptop-l:w-[1px];
+  @apply laptop-l:bg-dark-gray;
 }

@@ -5,5 +5,5 @@ export interface InputTextInterface {
 export interface InputTextConstructor {
   name: string
   placeholder?: string
-  onChange: (value: string) => void;
+  onChange: (value: string) => void
 }

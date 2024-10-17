@@ -1,13 +1,8 @@
-.input_text_wrapper{
-  @apply flex;
+.input_text_wrapper {
+  @apply flex w-full max-w-[34.68rem];
 }
 
-.input_text{
-  @apply w-[498px] h-[59px] rounded-l-[15px] border border-black border-solid text-[1.8rem] pl-[1.4em] font-normal hover:cursor-pointer;
-}
-
-@media only screen and (max-width: 757px) {
-  .input_text_wrapper{
-    @apply w-[35%] min-w-[26.4rem];
-  }
+.input_text {
+  @apply w-full rounded-l-2xl rounded-r-none pl-5 text-[0.8rem] outline outline-[0.7px] outline-very-dark-gray;
+  @apply hover:cursor-pointer mobile-l:text-lg;
 }

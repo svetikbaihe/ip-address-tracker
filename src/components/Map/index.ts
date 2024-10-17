@@ -1,6 +1,3 @@
-export { default } from './component';
+export { default } from "./component"
 
-export {
-  type MapInterface,
-  type MapConstructor
-} from './types';
+export { type MapInterface, type MapConstructor } from "./types"

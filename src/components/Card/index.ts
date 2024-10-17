@@ -1,7 +1,3 @@
-export { default } from './component';
+export { default } from "./component"
 
-export type {
-  CardConstructor,
-  CardInterface,
-  CardDataType
-} from './types';
+export type { CardConstructor, CardInterface, CardDataType } from "./types"

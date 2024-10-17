@@ -1,29 +1,12 @@
 .header_search {
-  background: url('/pattern-bg-desktop.png') 0 0/ cover no-repeat;
-  @apply h-[28rem] flex items-center flex-col gap-[3em] pt-[3.6em];
+  @apply flex min-h-[17.5rem] flex-col items-center bg-[url('/images/pattern-bg-mobile.png')] bg-cover;
+  @apply justify-center gap-4 bg-no-repeat pb-[1.7em] 600:bg-[url('/images/pattern-bg-desktop.png')] 600:pb-16;
 }
 
 .title {
-  @apply text-white text-[2.8rem] font-medium;
+  @apply text-[1.4rem] font-medium text-white sm:text-[2.8rem];
 }
 
 .input_wrapper {
-  @apply flex;
-}
-
-@media only screen and (max-width: 757px){
-  .input_wrapper {
-    @apply w-full justify-center;
-  }
-}
-
-@media only screen and (max-width: 375px){
-  .header_search {
-    background: url('/pattern-bg-mobile.png') 0 0/ cover no-repeat;
-    @apply flex-col;
-  }
-
-  .input_wrapper {
-    @apply min-w-[326px];
-  }
+  @apply z-[500] flex w-full justify-center px-[1.375rem];
 }
